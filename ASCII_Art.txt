@@ -1,0 +1,81 @@
+    // 2nd Floor - Door Closed
+    printf(" _____________ \n");
+    printf("|  2nd Floor  |\n");
+    printf("|   __   __   |\n");
+    printf("|  |  | |  |  |\n");
+    printf("|  |  | |  |  |\n");
+    printf("|  |  | |  |  |\n");
+    printf("|  |__| |__|  |\n");
+    printf("| Door Closed |\n");
+    printf("|_____________|\n");
+    printf("|             |\n");
+    printf("|=============|\n");
+    printf("|  1st Floor  |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|_____________|\n");
+
+    // 2nd Floor - Door Opened
+    printf(" _____________ \n");
+    printf("|  2nd Floor  |\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("|  Door Open  |\n");
+    printf("|_____________|\n");
+    printf("|             |\n");
+    printf("|=============|\n");
+    printf("|  1st Floor  |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|_____________|\n");
+
+    // 1st Floor - Door Closed
+
+    printf("|_____________|\n");
+    printf("|  2nd Floor  |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|=============|\n");
+    printf(" _____________ \n");
+    printf("|  1st Floor  |\n");
+    printf("|   __   __   |\n");
+    printf("|  |  | |  |  |\n");
+    printf("|  |  | |  |  |\n");
+    printf("|  |  | |  |  |\n");
+    printf("|  |__| |__|  |\n");
+    printf("| Door Closed |\n");
+    printf("|_____________|\n");
+
+    // 1st Floor - Door Opened
+
+    printf("|_____________|\n");
+    printf("|  2nd Floor  |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|             |\n");
+    printf("|=============|\n");
+    printf(" _____________ \n");
+    printf("|  1st Floor  |\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("||           ||\n");
+    printf("|  Door Open  |\n");
+    printf("|_____________|\n");
