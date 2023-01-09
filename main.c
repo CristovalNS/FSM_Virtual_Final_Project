@@ -1,61 +1,69 @@
 #include <stdio.h>
 #include "mylib/fsmLogic.h"
+#include <string.h>
 
 int main(void) {
-  int U_Select, D_Select, Floor_lvl, Door_state;
+  int U_Select, D_Select, Door_state;
   int nextState[2], output[4];
+  char quit[10]; // Variable to store 'quit'
+  int Floor_lvl;
 
   printf("--------------------------------------------------\n");
   printf("This is a simple Elevator FSM implemented in C language\n");
   printf("Made by: Cristoval Neo Sasono_2602158235\n");
   printf("--------------------------------------------------\n");
 
-  // User input values
-  printf("UP Button ([0] = NO INPUT | [1] = SELECT): ");
-  scanf("%d", &U_Select);
-  if (U_Select == 1){
-    printf("Selected: [UP Button]\n");
-  }
-
-  printf("--------------------------------------------------\n");
-
-  printf("DOWN Button ([0] = NO INPUT | [1] = SELECT): ");
-  scanf("%d", &D_Select);
-  if (D_Select == 1){
-    printf("Selected: [DOWN Button]\n");
-  }
-
-  printf("--------------------------------------------------\n");
-
+  printf("Before starting this simulation, please enter the starting floor level. \n");
   printf("Floor Level([0] = 1st Floor | [1] = 2nd Floor): ");
-  scanf("%d", &Floor_lvl);
+  scanf("%d", &Floor_lvl); // get initial value of Floor_lvl
   if (Floor_lvl == 0){
-    printf("Current Floor: [1st Floor]\n");
+    printf("Starting Floor: [1st Floor]\n");
   } 
   else if (Floor_lvl == 1){
-    printf("Current Floor: [2nd Floor]\n");
+    printf("Starting Floor: [2nd Floor]\n");
   }
 
+  while (1){
+  printf("--------------------------------------------------\n");
+  printf("Starting elevator simulation.\n");
   printf("--------------------------------------------------\n");
 
-  printf("Door State ([0] = OPEN | [1] = CLOSED): ");
-  scanf("%d", &Door_state);
-  if (Door_state == 0){
-    printf("Door State: [OPEN]\n");
-  } 
-  else if (Door_state == 1){
-    printf("Door State: [CLOSED]\n");
-  }
 
-  printf("--------------------------------------------------\n");
+  // User input values
+  printf("UP Button ([0] = NO INPUT | [1] = SELECT): ");
+    scanf("%d", &U_Select);
+    if (U_Select == 1){
+      printf("Selected: [UP Button]\n");
+    }
 
-  // Calculate next state
-  calcNextState(U_Select, D_Select, Floor_lvl, Door_state, nextState);
-  printf("Next state: %d %d\n", nextState[1], nextState[0]);
+    printf("--------------------------------------------------\n");
 
-  // Calculate output
-  calcOutput(Floor_lvl, Door_state, output);
-  printf("LED Output BEFORE: %d %d %d %d\n", output[0], output[1], output[2], output[3]);
+    printf("DOWN Button ([0] = NO INPUT | [1] = SELECT): ");
+    scanf("%d", &D_Select);
+    if (D_Select == 1){
+      printf("Selected: [DOWN Button]\n");
+    }
+
+    printf("--------------------------------------------------\n");
+
+    printf("Door State ([0] = OPEN | [1] = CLOSED): ");
+    scanf("%d", &Door_state);
+    if (Door_state == 0){
+      printf("Door State: [OPEN]\n");
+    } 
+    else if (Door_state == 1){
+      printf("Door State: [CLOSED]\n");
+    }
+
+    printf("--------------------------------------------------\n");
+
+    // Calculate next state
+    calcNextState(U_Select, D_Select, Floor_lvl, Door_state, nextState);
+    printf("Next state: %d %d\n", nextState[1], nextState[0]);
+
+    // Calculate output
+    calcOutput(Floor_lvl, Door_state, output);
+    printf("LED Output BEFORE: %d %d %d %d\n", output[0], output[1], output[2], output[3]);
 
   printf("--------------------------------------------------\n");
 
@@ -268,7 +276,21 @@ int main(void) {
     printf("LED Light Indicators: \n");
     printf("[1]\033[33m[2]\033[0m[O]\033[31m[X]\033[0m\n");
   }
+
+  printf("--------------------------------------------------\n");
   
+    Floor_lvl = nextState[1];
+  //Test [Comment when done]: To see the updated value of Floor_lvl with the value of nextState[1]
+    // printf("Floor Level([0] = 1st Floor | [1] = 2nd Floor): \n");
+    // printf("Current Floor lvl: %d\n", Floor_lvl);
+
+  printf("Enter anything to continue the simulation. Otherwise, enter 'quit': ");
+    scanf("%s", quit);
+    if (strcmp(quit, "quit") == 0) {
+      printf("Thank you for using my elevator simulation ^-^");
+      break; // exit the loop
+    }
+  }
   return 0;
 }
 

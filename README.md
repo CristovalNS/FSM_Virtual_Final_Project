@@ -1,6 +1,14 @@
 Made by: Cristoval Neo Sasono_2602158235
 
-# Elevator FSM in C Language
+# Elevator FSM in C Language 
+
+## Table of contents
+
+- [Introduction](#introduction)
+- [FSM Model](#fsm-model)
+- [Running the Code](#running-the-code)
+- [Test Examples](#test-examples)
+- [Updates](#updates)
 
 ## Introduction
 
@@ -97,3 +105,13 @@ Here are some of the results of the tests I've conducted by myself.
     LED Output BEFORE: 0 1 1 0
 
 ![Space N = 1000](images/0110.png)
+
+# Updates
+
+    Version 1.0:
+    - Released on 2 January 2023
+    
+    Version 1.1:
+    - Updated on 9 January 2023
+    - Allows the code to continue running indefinietly until the user quits.
+    - Simulation will now retain the state of the 'Floor_lvl' of the elevator. No need to redeclare the 'Floor_lvl' state.
