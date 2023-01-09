@@ -75,7 +75,7 @@ Here are a brief description of the variables:
     [G] = Green LED (Door Open) | [R] = Red LED (Door Closed)   
 
 
-# Test Examples
+# Test Examples - Version 1.0
 
 Here are some of the results of the tests I've conducted by myself.
 
