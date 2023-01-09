@@ -113,5 +113,5 @@ Here are some of the results of the tests I've conducted by myself.
     
     Version 1.1:
     - Updated on 9 January 2023
-    - Allows the code to continue running indefinietly until the user quits.
+    - Allows the code to continue running indefinitely until the user quits.
     - Simulation will now retain the state of the 'Floor_lvl' of the elevator. No need to redeclare the 'Floor_lvl' state.
